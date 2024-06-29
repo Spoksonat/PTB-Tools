@@ -43,25 +43,26 @@ Step-by-step guide on how to get the development environment running.
 
 ## Usage
 
-Instructions and examples for using the project. Include screenshots if applicable.
+To use this project, follow the instructions below.
 
-\`\`\`bash
-Example command to run the project or use a feature.
-\`\`\`
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Change the access permissions to the main bash script
+```sh
+   chmod u+x execute_app.sh
+```
+2. Execute the main bash file
+```sh
+   ./execute_app.sh
+```
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. If you have a suggestion for improving this project, please fork the repository and create a pull request. You can also open an issue with the tag "enhancement". Don't forget to give the project a star! Thank you!
 
 1. Fork the Project.
 2. Create your Feature Branch (\`git checkout -b feature/AmazingFeature\`).
 3. Commit your Changes (\`git commit -m 'Add some AmazingFeature'\`).
 4. Push to the Branch (\`git push origin feature/AmazingFeature\`).
 5. Open a Pull Request.
-
-Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## License
 

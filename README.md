@@ -46,13 +46,13 @@ Step-by-step guide on how to get the development environment running.
 To use this project, follow the instructions below.
 
 1. Change the access permissions to the main bash script
-```sh
-   chmod u+x execute_app.sh
-```
+   ```sh
+      chmod u+x execute_app.sh
+   ```
 2. Execute the main bash file
-```sh
-   ./execute_app.sh
-```
+   ```sh
+      ./execute_app.sh
+   ```
 
 ## Contributing
 

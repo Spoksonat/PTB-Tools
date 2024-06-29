@@ -20,23 +20,9 @@ This project features a graphical user interface built with HTML, CSS, and JavaS
 
 The Python codes used in this project implement tools for obtaining B1+ maps from CV/GRE or AFI images, selecting regions of interest (ROI) in the B1+ maps, executing B1 shimming algorithms, and designing kT-points pulses.
 
-### Built With
-
-- [Technology 1](https://example.com)
-- [Technology 2](https://example.com)
-- [Technology 3](https://example.com)
-
 ## Getting Started
 
-Instructions on how to set up the project locally. Include the following sub-sections:
-
-### Prerequisites
-
-List any prerequisites needed to install the project, such as software or tools.
-
-\`\`\`bash
-Example: npm install npm@latest -g
-\`\`\`
+To get a local copy up and running, follow these simple steps.
 
 ### Installation
 
@@ -48,11 +34,11 @@ Step-by-step guide on how to get the development environment running.
    \`\`\`
 2. Navigate to the project directory:
    \`\`\`bash
-   cd repo_name
+   cd PTB-Tools-main
    \`\`\`
 3. Install dependencies:
    \`\`\`bash
-   npm install
+   pip3 install -r requirements.txt
    \`\`\`
 
 ## Usage

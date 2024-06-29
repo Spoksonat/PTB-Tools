@@ -19,7 +19,7 @@ This project features a graphical user interface built with HTML, CSS, and JavaS
 
 The Python codes used in this project implement tools for obtaining B1+ maps from CV/GRE or AFI images, selecting regions of interest (ROI) in the B1+ maps, executing B1 shimming algorithms, and designing kT-points pulses.
 
-![Screenshot](images/demo.gif)
+![Screenshot](demo.gif)
 
 ## Getting Started
 

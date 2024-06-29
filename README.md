@@ -47,11 +47,11 @@ To use this project, follow the instructions below.
 
 1. Change the access permissions to the main bash script
    ```sh
-      chmod u+x execute_app.sh
+   chmod u+x execute_app.sh
    ```
 2. Execute the main bash file
    ```sh
-      ./execute_app.sh
+   ./execute_app.sh
    ```
 
 ## Contributing

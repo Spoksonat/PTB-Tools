@@ -70,12 +70,10 @@ Distributed under the MIT License. See [MIT License](https://github.com/Spoksona
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Manuel Fernando Sánchez Alarcón - manuel.alarcon@ptb.de - manuel-fernando-sanchez-alarcon@charite.de - mf.sanchez17@uniandes.edu.co
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [PTB-Tools](https://github.com/Spoksonat/PTB-Tools)
 
 ## Acknowledgments
 
-- [Resource 1](https://example.com)
-- [Resource 2](https://example.com)
-- [Resource 3](https://example.com)
+- [Christoph Aigner](https://github.com/chaigner)

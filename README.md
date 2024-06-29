@@ -6,7 +6,6 @@ Implementation of all MRI image analysis tools used by the Physikalisch-Technisc
 
 - [About the Project](#about-the-project)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <title>Welcome to PTB Tools</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">
+        Welcome to
+        <a
+          class="ptb"
+          href="https://www.ptb.de/cms/en/ptb/fachabteilungen/abt8/fb-81/ag-814.html"
+          target="_blank"
+          >PTB</a
+        >
+        Tools
+      </h1>
+      <h2 class="subtitle">Please select one of the next options</h2>
+      <section class="flex-container">
+        <a href="http://127.0.0.1:5000/B1_Mapping_Toolbox">
+          <div class="tool b1p-tool">
+            <p class="title-tool">\(B_1^+\) reconstruction tool</p>
+            <p class="description-tool">
+              This tool allows to load \(B_1^+\) data and reconstruct it by
+              using Fourier transform methods.
+            </p>
+          </div>
+        </a>
+        <div class="tool roi-tool">
+          <p class="title-tool">ROI tool</p>
+          <p class="description-tool">
+            This tool allows to select a region of interest (ROI) from
+            previously loaded \(B_1^+\) data, which can be used for
+            visualization or pulse design processes.
+          </p>
+        </div>
+        <div class="tool shimming-tool">
+          <p class="title-tool">\(B_1^+\) shimming tool</p>
+          <p class="description-tool">
+            This tool allows to perform \(B_1^+\) shimming calculations by using
+            a previously selected region of interest (ROI).
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

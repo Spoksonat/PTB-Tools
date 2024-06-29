@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <link
+      rel="stylesheet"
+      href="http://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.css"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="http://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/plots_Style.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <title>{{title}}</title>
+    {{ js_resources|indent(4)|safe }} {{ css_resources|indent(4)|safe }} {{
+    script|indent(4)|safe }}
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <a class="go-back" href="/B1_Mapping_Toolbox">Go back</a>
+        <h1 class="title">{{data.title}}</h1>
+        <a class="go-back hidden">Go back</a>
+      </div>
+
+      <div class="plots">{{ div|indent(4)|safe }}</div>
+    </main>
+    <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+  </body>
+</html>

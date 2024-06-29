@@ -1,6 +1,6 @@
-# Project Title
+# PTB-Tools
 
-One sentence description of the project.
+Implementation of all MRI image analysis tools used by the Physikalisch-Technische Bundesanstalt (PTB).
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ One sentence description of the project.
 
 ## About the Project
 
-Provide a brief overview of the project. Explain what the project does, why it exists, and its intended purpose.
+This project utilizes a graphical user interface built with HTML, CSS, and JavaScript to execute image analysis and processing algorithms specifically for magnetic resonance imaging (MRI). These algorithms are typically used by division 8.14 (Ultrahigh Field MRI) of the Physikalisch-Technische Bundesanstalt (PTB).
 
 ### Built With
 

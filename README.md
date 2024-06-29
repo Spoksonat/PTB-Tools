@@ -16,7 +16,9 @@ Implementation of all MRI image analysis tools used by the Physikalisch-Technisc
 
 ## About the Project
 
-This project utilizes a graphical user interface built with HTML, CSS, and JavaScript to execute image analysis and processing algorithms specifically for magnetic resonance imaging (MRI). These algorithms are typically used by division 8.14 (Ultrahigh Field MRI) of the Physikalisch-Technische Bundesanstalt (PTB).
+This project features a graphical user interface built with HTML, CSS, and JavaScript to execute image analysis and processing algorithms specifically designed for magnetic resonance imaging (MRI). These algorithms are typically used by division 8.14 (Ultrahigh Field MRI) of the Physikalisch-Technische Bundesanstalt (PTB).
+
+The Python codes used in this project implement tools for obtaining B1+ maps from CV/GRE or AFI images, selecting regions of interest (ROI) in the B1+ maps, executing B1 shimming algorithms, and designing kT-points pulses.
 
 ### Built With
 

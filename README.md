@@ -1,6 +1,6 @@
 # PTB-Tools
 
-Implementation of all MRI image analysis tools used by the Physikalisch-Technische Bundesanstalt (PTB).
+Implementation of all MRI image analysis tools used by the Physikalisch-Technische Bundesanstalt (PTB)- div. 8.14.
 
 ## Table of Contents
 

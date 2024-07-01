@@ -1,6 +1,9 @@
 # PTB-Tools (Linux and MacOS)/ Under development
 
-Implementation of all MRI image analysis tools used by the Physikalisch-Technische Bundesanstalt (PTB)- div. 8.14.
+Implementation of all MRI image analysis tools used by the Physikalisch-Technische Bundesanstalt (PTB)- div. 8.14. The MRI image processing codes are based on Matlab codes from:
+
+- Sebastian Schmitter (sebastian.schmitter@ptb.de)
+- Christoph Aigner (christoph.aigner@ptb.de)
 
 ## Table of Contents
 

@@ -34,7 +34,7 @@ Step-by-step guide on how to get the development environment running.
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/your_username/repo_name.git
+   git clone https://github.com/Spoksonat/PTB-Tools.git
    ```
 2. Navigate to the project directory:
    ```sh

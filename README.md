@@ -57,6 +57,7 @@ To use this project, follow the instructions below.
    ```sh
    ./execute_app.sh
    ```
+If you want to know more details about using this software, you can refer to the [PTB-Tools documentation](PTB_Tools_Documentation.pdf).
 
 ## Contributing
 

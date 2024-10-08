@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/ROITool_Style.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <title>ROI Tool</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1 class="title">ROI Tool</h1>
+        <h2 class="subtitle">Please select one of the next options</h2>
+      </div>
+      <section class="flex-container container-1">
+        <a href="/ROI_Toolbox/selectROI/">
+          <div class="tool roi-select-tool">
+            <p class="title-tool">Select ROI</p>
+            <p class="description-tool">
+              This tool allows to select Regions of Interest (ROI)
+            </p>
+          </div>
+        </a>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+        <div class="tool no-tool">
+          <p class="title-tool">New tool</p>
+          <p class="description-tool">
+            This tool allows to do some wonderful things.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/ROITool_Script.js') }}"></script>
+  </body>
+</html>

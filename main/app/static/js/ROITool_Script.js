@@ -23,7 +23,6 @@ const btnSendFilename = document.querySelector(".send-filename");
 const btnShowB1p = document.querySelector(".b1p-button");
 const btnShowB1m = document.querySelector(".b1m-button");
 const btnShowNcm = document.querySelector(".ncm-button");
-let mode = "None";
 
 const closeModal1 = function () {
   modalWindow1.classList.add("hidden");
@@ -41,14 +40,6 @@ const openModal1 = function () {
   modalWindow1.classList.remove("hidden");
   overlay.classList.remove("hidden");
   modalWindow1.classList.add("center");
-  mode = "CV";
-};
-
-const openModal1Afi = function () {
-  modalWindow1.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-  modalWindow1.classList.add("center");
-  mode = "AFI";
 };
 
 const openModal2 = function () {
@@ -67,7 +58,7 @@ const sendData = function () {
   $.ajax({
     url: "/process",
     type: "POST",
-    data: { data: value, loadMode: mode },
+    data: { data: value },
     success: function (response) {},
     error: function (error) {
       console.log(error);
@@ -131,9 +122,7 @@ subsection2.addEventListener("click", function () {
   container2.classList.toggle("hidden");
 });
 
-toolEl[0].addEventListener("click", openModal1); //Open load window
-toolEl[6].addEventListener("click", openModal1Afi);
-
+toolEl[0].addEventListener("click", openModal1);
 toolEl[4].addEventListener("click", openModal2);
 btnCloseModal1.addEventListener("click", closeModal1);
 btnCloseModal2.addEventListener("click", closeModal2);

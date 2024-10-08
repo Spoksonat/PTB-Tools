@@ -3,8 +3,11 @@ from app import app
 from functions import B1plusmap_TXfct, TXsc_set_CV_as_CurrB1_map #, AFI_TXfct
 import pickle
 from bokeh.resources import INLINE
-from tools import prompt_tools
 import os
+from tornado.ioloop import IOLoop
+from threading import Thread
+from bokeh.server.server import Server
+from bokeh.embed import server_document
 
 # routes for B1 Mapping
 global optsdef_b1map
@@ -33,10 +36,12 @@ def B1_Mapping_Toolbox():
 @app.route('/process', methods=['POST']) 
 def process(): 
     data = request.form.get('data') # String obtained from /process web path. The string is something like C:/fakepath/fileselected, but we want to obtain only the selected file 
+    mode = request.form.get('loadMode')
     splitted_data = data.split(sep="\\")
     path_to_file = optsdef_b1map['PATH_TO_MAIN'] + "files/RAW/" + splitted_data[-1]
     print(path_to_file)
     optsdef_b1map['PATH_TO_RAW_FILE'] = path_to_file
+    optsdef_b1map['LOAD_MODE'] = mode
     return path_to_file
 
 @app.route('/process2', methods=['POST'])
@@ -47,15 +52,28 @@ def process2():
 
 @app.route('/B1_Mapping_Toolbox/relative_B1Plus_Maps/')
 def relative_B1Plus_Maps():
-    global CVb1
-    CVb1 = B1plusmap_TXfct.B1plusmap_TXfct(optsdef_b1map)   
-    # for later use, the B1 plus map will be saved as a .pk1 file (pickle file)
-    B1p = TXsc_set_CV_as_CurrB1_map.TXsc_set_CV_as_CurrB1_map(CVb1)
-    with open(optsdef_b1map['PATH_TO_MAIN'] + 'temp/B1p.pk1', 'wb') as output2:
-        pickle.dump(B1p, output2, pickle.HIGHEST_PROTOCOL)
-    optsdef_b1map['BOOLEAN_LOAD'] = "true" 
-    data = {"boolLoadData" : optsdef_b1map['BOOLEAN_LOAD'] }
-    return render_template('B1PlusMapping_Web.html', data=data)
+    if(optsdef_b1map['LOAD_MODE'] == "CV"):
+        global CVb1
+        CVb1 = B1plusmap_TXfct.B1plusmap_TXfct(optsdef_b1map)   
+        # for later use, the B1 plus map will be saved as a .pk1 file (pickle file)
+        B1p = TXsc_set_CV_as_CurrB1_map.TXsc_set_CV_as_CurrB1_map(CVb1)
+        with open(optsdef_b1map['PATH_TO_MAIN'] + 'temp/B1p.pk1', 'wb') as output2:
+            pickle.dump(B1p, output2, pickle.HIGHEST_PROTOCOL)
+        optsdef_b1map['BOOLEAN_LOAD'] = "true" 
+        data = {"boolLoadData" : optsdef_b1map['BOOLEAN_LOAD'] }
+        return render_template('B1PlusMapping_Web.html', data=data)
+    elif(optsdef_b1map['LOAD_MODE'] == "AFI"):
+        global AFImaps
+        AFImaps = B1plusmap_TXfct.AFImap_TXfct(optsdef_b1map)   
+        # for later use, the B1 plus map will be saved as a .pk1 file (pickle file)
+        AFI = TXsc_set_CV_as_CurrB1_map.TXsc_set_CurrAFI_map(AFImaps)
+        with open(optsdef_b1map['PATH_TO_MAIN'] + 'temp/AFI.pk1', 'wb') as output2:
+            pickle.dump(AFI, output2, pickle.HIGHEST_PROTOCOL)
+        optsdef_b1map['BOOLEAN_LOAD'] = "true" 
+        data = {"boolLoadData" : optsdef_b1map['BOOLEAN_LOAD'] }
+        return render_template('B1PlusMapping_Web.html', data=data)
+    else:
+        raise TypeError("None is not a filetype")
 
 @app.route('/B1_Mapping_Toolbox/b1p/')
 def b1p():
@@ -92,6 +110,24 @@ def save_b1p():
 
     data = {"boolLoadData" : optsdef_b1map['BOOLEAN_LOAD'] }
     return render_template('B1PlusMapping_Web.html', data=data)
+
+@app.route('/B1_Mapping_Toolbox/Plot_AFI/', methods=['GET'])
+def plot_afi_all_slices():
+    js_resources    = INLINE.render_js()
+    css_resources   = INLINE.render_css()  
+    data            = {"title": "AFI Maps"}
+
+    def bk_worker():
+        # Can't pass num_procs > 1 in this configuration. If you need to run multiple
+        # processes, see e.g. flask_gunicorn_embed.py
+        server = Server({'/selectROI': AFImaps.Plot_AFI_map_TXfct}, io_loop=IOLoop(), allow_websocket_origin=["127.0.0.1:5000"])
+        server.start()
+        server.io_loop.start()
+
+    Thread(target=bk_worker).start()
+
+    script = server_document('http://localhost:5006/selectROI')
+    return render_template('plots_ROI.html', title='ROI Selection', script=script, data=data)
 
 
 

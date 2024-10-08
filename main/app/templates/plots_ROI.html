@@ -24,18 +24,16 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <title>{{title}}</title>
-    {{ js_resources|indent(4)|safe }} {{ css_resources|indent(4)|safe }} {{
-    script|indent(4)|safe }}
   </head>
   <body>
     <main>
       <div class="header">
-        <a class="go-back" href="/B1_Mapping_Toolbox">Go back</a>
+        <a class="go-back" href="/ROI_Toolbox">Go back</a>
         <h1 class="title">{{data.title}}</h1>
         <a class="go-back hidden">Go back</a>
       </div>
 
-      <div class="plots">{{ div|indent(4)|safe }}</div>
+      <div class="plots">{{ script|safe }}</div>
     </main>
     <script src="{{ url_for('static', filename='js/plots_Script.js') }}"></script>
   </body>

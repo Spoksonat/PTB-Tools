@@ -88,10 +88,11 @@
         <h2 class="subsection-2">AFI (single channel)</h2>
       </div>
       <section class="flex-container container-2">
-        <div class="tool no-tool">
-          <p class="title-tool">Reconstruct AFI from Dicom Data</p>
+        <div class="tool b1p-reco-tool">
+          <p class="title-tool">Obtain AFI maps</p>
           <p class="description-tool">
-            This tool allows to reconstruct AFI from Dicom Data.
+            This tool allows to obtain AFI data from
+            RAW scans
           </p>
         </div>
         <div class="tool no-tool">
@@ -101,12 +102,17 @@
             sampled).
           </p>
         </div>
-        <div class="tool no-tool">
-          <p class="title-tool">Show AFI data all slices</p>
-          <p class="description-tool">
-            This tool allows to show you all slices of AFI data.
-          </p>
-        </div>
+        <a
+          class="ncm-button"
+          href="/B1_Mapping_Toolbox/Plot_AFI/"
+        >
+          <div class="tool noise-corr-tool">
+            <p class="title-tool">Show AFI data all slices</p>
+            <p class="description-tool">
+              This tool allows to show all slices in AFI data.
+            </p>
+          </div>
+        </a>
         <div class="tool no-tool">
           <p class="title-tool">Show AFI data center slice</p>
           <p class="description-tool">
@@ -137,7 +143,8 @@
           >Load File</a
         >
         <h3 class="modal-message modal-message1"></h3>
-      </div>
+      </div>      
+
       <div class="modal modal2 hidden">
         <button class="close-modal close-modal2">&times;</button>
         <h1 class="modal-title">Save \(B_1^+\) Maps as:</h1>

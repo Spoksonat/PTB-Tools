@@ -5,10 +5,8 @@ Flask==3.0.3
 mahotas==1.4.15
 matplotlib==3.9.0
 numpy==2.0.0
-oct2py==5.7.0
-pandas==2.2.2
 pydicom==2.4.4
 pyMapVBVD==0.5.7
+scikit-image==0.24.0
 scipy==1.13.1
-setuptools==58.0.4
-tqdm==4.66.4
+tornado==6.4
